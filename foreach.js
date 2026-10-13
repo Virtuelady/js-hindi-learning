@@ -34,3 +34,12 @@ const mycoding = [
 mycoding.forEach( (item) => {
     //console.log(item.languageName);
 } )
+
+// const Iscoding = ["js","rb","py","cpp","css"]
+
+//  const values = Iscoding.forEach( (item)=>{
+//    //console.log(item);
+//    return item
+// })
+// console.log(values);
+
