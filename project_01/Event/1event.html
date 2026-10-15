@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background-color:#414141;color:aliceblue">
+    <h2>Amazing Image</h2>
+    <ul id="image">
+        <li>
+            <img width="200px" id="photoshop" src="https://images.pexels.com/photos/7906039/pexels-photo-7906039.jpeg" alt="photoshop"></li>
+
+            <li>
+            <img width="200px" id="landscap" src="https://images.pexels.com/photos/19856577/pexels-photo-19856577.jpeg" alt="landscap"></li>
+
+            <li>
+            <img width="200px" id="nature" src="https://images.pexels.com/photos/16830688/pexels-photo-16830688.jpeg" alt="nature"></li>
+
+            <li>
+            <img width="200px" id="playing" src="https://images.pexels.com/photos/27724369/pexels-photo-27724369.jpeg" alt="playing"></li>
+
+            <li>
+            <img width="200px" id="grassland" src="https://images.pexels.com/photos/37368106/pexels-photo-37368106.jpeg" alt="grassland></li>
+
+            <br><br>
+            <li> <a style="color:aliceblue;" href="https://google.com" id="google"> Google </a></li>
+    </ul>
+</body>
+<script>
+    //   document.getElementById('nature').onclick=function(){
+
+    //     alert("nature clicked")
+    //   }
+    //attachEvent()
+    //jQuery - onEvent
+
+    // document.getElementById('nature').addEventListener('click',function(){
+    //     alert("nature clicked again")
+    // })  //false default interview purpose
+
+    //type, timestamp, defaultPrevented 
+    //target, toElement,srcElement, currentTarget,
+    //clientX, clientY,screenX,screenY
+    //atlkey,ctrkkey,shiftkey,keyCode
+   
+//     document.getElementById('image').addEventListener('click', function(e){
+//        // console.log("clicked inside the ul");
+//     },true)
+
+//     document.getElementById('nature').addEventListener('click', function(e){
+//         console.log("Clicked inside the nature");
+//         e.stopPropagation()
+        
+//     },true)
+
+//    //Event propogation false =event bubbling ,true =event capturing 
+//     document.getElementById('google').addEventListener('click', function(e){
+        
+        
+//          e.preventDefault()
+//          e.stopPropagation()
+//          console.log("google clicked");
+//     },false)
+
+    
+  
+document.querySelector('#image').addEventListener
+('click',function(e){
+
+    if(e.target.tagName === 'IMG'){
+
+        console.log(e.target.id);
+    
+        let removeIt =e.target.parentNode
+removeIt.remove()
+
+    }
+    },false)
+//console.log(e.target.parentNode);
+
+//removeIt.parentNode.removeChild(removeIt)
+
+    </script>
+</html>
